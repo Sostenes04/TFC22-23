@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <title>{% block title %} {% endblock title %}</title>
 </head>
 <body>
-    <h1>Hello!!</h1>
+    <header>
+        <h1><a href="/">- QIDCC - </a></h1>
+        <h3><a href="{% url 'registar' %}">Registar</a></h3>
+    </header>
+    <hr>
+    <div class="conteiner">
+    {% block content %}{% endblock content %}
+    </div>
 </body>
 </html>
